@@ -1,0 +1,232 @@
+/*
+main color: #f15822;
+bg color: #feeee9;
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 16px;
+}
+body {
+	background: #feeee9;
+	font-family: "Roboto Mono", monospace;
+	color: #f15822;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	display: flex;
+	width: 100vw;
+}
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+main {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow-y: auto;
+}
+header {
+	overflow: hidden;
+}
+#logo img {
+	height: 5rem;
+	margin-top: 1rem;
+}
+#issues {
+	padding-top: 1rem;
+}
+a {
+	color: #f15822;
+	text-decoration: none;
+}
+h1, h2, h3 {
+	font-size: 1.6rem;
+	font-weight: normal;
+}
+.cap {
+	text-transform: uppercase;
+}
+.credits {
+	text-indent: 0;
+	font-size: .8rem;
+	margin-top: 2rem;
+}
+.menu {
+	list-style-type: none;
+}
+.menu li {
+	display: inline-block;
+	padding: 0 2rem;
+}
+.manu li:last-child{
+	padding-right: 0;
+}
+.container {
+	overflow: auto;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+	text-align: right;
+}
+.center {
+	clear: both;
+	text-align: center;
+}
+.divider {
+	clear: both;
+	background: url(img/ls_line.svg) repeat-x left center;
+	height: 2.4rem;
+	background-size: 1.3rem;
+}
+.white {
+	background-image: url(img/ls_line_w.svg);
+}
+#popups {
+	background: #f15822;
+	position: relative;
+	color: #feeee9;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	padding: 0 2rem 2rem 2rem;
+	overflow: scroll;
+}
+#contact {
+	overflow-wrap: break-word;
+}
+.info{
+	padding: 7.55rem 0 5rem;
+}
+.cover {
+	padding: 1rem;
+}
+section p+p {
+	text-indent: 3rem;
+}
+.close {
+	position: absolute;
+	top: 2.6rem;
+	right: 1rem;
+}
+#close-icon {
+	width: 80px;
+	height: 80px;
+	stroke: #feeee9;
+	stroke-width: 9;
+}
+.close:hover {
+	cursor: pointer;
+}
+a:hover, .active {
+	cursor: pointer;
+	text-decoration: line-through;
+}
+#popups a {
+	color: #feeee9;
+}
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+	z-index: 20;
+}
+.screensaver {
+	background: #feeee9;
+}
+#pool {
+	width: auto;
+	max-height: 100%;
+	max-width: 100%;
+}
+.murmur, footer {
+	padding: 2rem 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+footer {
+	background: #f15822;
+	color: #feeee9;
+}
+.hidden {
+	display: none;
+}
+.svglogo {
+	fill: #F15822;
+}
+.st1 {
+	fill: none;
+	stroke: #F15822;
+	stroke-width: 3;
+	stroke-linecap: round;
+	stroke-miterlimit: 10;
+}
+.wave {
+	animation: wavy linear 5s infinite;
+}
+.overlay:hover {
+	cursor: pointer;
+}
+.mask {
+	clip-path: url(#clip);
+}
+@keyframes wavy {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(57.6%);
+	}
+}
+@media screen and (max-width: 1030px) {
+	html {
+		font-size: 12px;
+	}
+	body {
+		display: block;
+	}
+	#logo, #issues {
+		text-align: center;
+		width: 100%;
+	}
+	#issues {
+		padding-top: 0;
+	}
+	.hidden {
+		display: block;
+	}
+	.info{
+		padding-top: 5rem;
+	}
+	.close{
+		top: 1.6rem;
+	}
+	#close-icon{
+		width: 50px;
+		height: 50px;
+	}
+	.overlay img {
+		display: block;
+		margin-top: 3rem;
+		width: 100%;
+		height: auto;
+	}
+	#popups {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
